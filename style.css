@@ -1,0 +1,269 @@
+body {
+    font-family: 'Granjon.otf';
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #DADADA;
+}
+@font-face {
+    font-family: 'Granjon.otf';
+    src: url('/Gucci/Granjon.otf') format('opentype');
+}
+
+/*Navbar*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100vw;
+    height: auto;
+    background-color:transparent;
+    padding-top: 25px;padding-bottom: 25px;
+    padding-inline: 10vw;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    transition: all .1s ease-in;
+    transition-delay: .5s;
+    z-index: 9;
+}
+.logo {
+    font-size: 14vw;
+    color: #fff;
+    text-shadow: -1px 1px 5px #0000005c;
+    text-wrap: nowrap;
+    transition: all .5s linear;
+    position: fixed;
+    left: 50%;
+    letter-spacing: 30px;
+    transform: translate(-50%);
+    z-index: 10 !important;
+    user-select: none;
+}
+.iconBox {
+    position: relative;
+}
+.iconBox > button {
+   padding: 20px;
+   font-size: 20px;
+    background-color: transparent;
+    border: none;
+}
+.before_btn {
+        position: absolute; 
+        top: 0; 
+        left: 100%; 
+}
+.motherDay {
+    width: 100%;
+    height: 50vw;
+    background-image: url("/img/mother day.avif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 0;
+    display: flex;
+    justify-content:end;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 100px;
+    z-index: -1;
+    transition: all .5s linear;
+}
+#HBGsXNewIn,#JwlXSneakers {
+    width: 100vw;
+    position: relative;
+    padding: 2rem;
+    padding-inline: 2vw;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.HBGs,.NewIn,.Jwl,.sneakers {
+    width: 48%;
+    height: 120vh;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content:end;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 100px;
+}
+.HBGs {
+    background-image: url("/img/women handbag.avif");
+}
+.Jwl {
+    background-image: url("/img/fine jewelery.avif");
+}
+.sneakers {
+    background-image: url("/img/re-web.avif");
+}
+.NewIn {
+    background-image: url("/img/new in.avif");
+}
+
+#featuredSection {
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items:flex-start;
+    gap: 10%;
+    position: relative !important;
+    padding-inline: 2vw;
+    box-sizing: border-box;
+    top: 30vh;
+}
+#featuredSection::before {
+    content: "FEATURED";
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: -15vh;
+    z-index: 9;
+}
+.loafer {
+    width: 40%;
+}
+#service {
+    margin-top: 50vh;
+    width: auto;
+    overflow-x: scroll;
+}
+.serviceCategory {
+    width: 100%;
+    padding-inline: 2vw;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400 !important;
+}
+.categoryStyle {
+    width: 30vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+footer {
+    width: 100vw;
+    height: 45vh;
+    background-image: url("/img/footer logo.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-top: 15vh;
+}
+@media (max-width:992px) {
+    .logo {
+        font-size: 3vw !important;
+        color: #000;
+        position: fixed;
+        left: 50%;
+        transform: translate(-50%);
+        top: 3vh !important;
+        letter-spacing: 5px;
+        z-index: 20;
+        transition: all 0s linear;
+    }
+    .navbar {
+        background-color:#fff;
+    }
+    #HBGsXNewIn,#JwlXSneakers {
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+    }
+    .HBGs,.NewIn,.Jwl,.sneakers {
+        width: 95%;
+        height: 120vh;
+    }
+    #featuredSection {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 40px;
+    }
+    .serviceCategory {
+        width: auto;
+        overflow-x: scroll;
+        display: grid !important;
+        grid-template-columns: auto auto auto;
+        gap: 40px;
+        padding-inline-start: 4vw;
+    }
+    .categoryStyle {
+        width: 90vw !important;
+        height: auto;
+    }
+    .loafer {
+        width: 95%;
+    }
+    footer {
+        height: 40vh;
+    }
+}
+@media (max-width:1400px) {
+    .HBGs,.NewIn,.Jwl,.sneakers {
+        height: 80vh;
+    }
+}
+@media (max-width:768px) {
+   .navbar {
+        justify-content:right;
+    }
+    .logo {
+        left: 20px;
+        transform: translate(0);
+    }
+    footer {
+        height: 25vh;
+        background-size: 100%;
+    }
+}
+@media (max-width:576px) {
+    #header {
+        width: 100vw;
+        height: 100px;
+        background-color: #fff;
+        position: fixed;
+        z-index: 9;
+    }
+    .navbar {
+        width: calc(100% - 70%);
+        height: calc(100% - 0%);
+        right: -100%;
+        top: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.5s linear;
+    }
+    .active {
+        right: 0;
+    }
+    .iconBox {
+        display: flex;
+        flex-direction: column;
+        gap: 4vh;
+    }
+    .before_btn {
+        display: none;
+    }
+    .logo {
+        width: auto;
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 5px;
+    }
+    .HBGs,.NewIn,.Jwl,.sneakers {
+        height: 70vh;
+    }
+}
